@@ -2,7 +2,7 @@
  * @Author: Adam Li adam@bizzone.com
  * @Date: 2024-12-06 10:11:57
  * @LastEditors: Adam Li
- * @LastEditTime: 2024-12-06 10:35:13
+ * @LastEditTime: 2024-12-06 17:07:21
  * @FilePath: /tomato_time_tracker/app/_layout.tsx
  */
 
@@ -33,12 +33,18 @@ export default function RootLayout() {
   }
 
   return (
-    <GluestackUIProvider mode="light"><Stack>
+    <GluestackUIProvider mode="light">
+      <Stack>
         <Stack.Screen
           name="(tabs)"
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="(auth)"
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="+not-found" />
-      </Stack></GluestackUIProvider>
+      </Stack>
+    </GluestackUIProvider>
   );
 }
